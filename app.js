@@ -109,6 +109,11 @@ app.post("/login",function(req,res){
         }
 })
 
+app.get("/logout",function(req,res){
+    req.logOut();
+    res.redirect("/")
+})
+
 app.listen(3000,function(){
     console.log("server is running on port 3000");
 });
